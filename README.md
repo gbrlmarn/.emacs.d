@@ -1,3 +1,8 @@
-# Emacs configuration
+# Gabriel's Emacs config
 
-My emacs configuration generated 'settings.org' using 'org-babel'
+My personal Emacs configuration
+
+``` shell
+$ ln -s ./.emacs.d/init.el ~/.emacs.d/init.el
+```
+
