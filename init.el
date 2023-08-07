@@ -50,10 +50,14 @@
 
 ;; Fonts
 (cond
+ ((find-font (font-spec :name "Cascadia Code"))
+  (set-frame-font "Cascadia Code-18"))
+ ((find-font (font-spec :name "Menlo"))
+  (set-frame-font "Menlo-18"))
  ((find-font (font-spec :name "DejaVu Sans Mono"))
-  (set-frame-font "DejaVu Sans Mono-14"))
+  (set-frame-font "DejaVu Sans Mono-18"))
  ((find-font (font-spec :name "Inconsolata"))
-  (set-frame-font "Inconsolata-14")))
+  (set-frame-font "Inconsolata-18")))
 
 ;; mode line settigs
 (line-number-mode t)
@@ -93,6 +97,7 @@
 ;; Use eww by default
 (setq browse-url-browser-function 'eww-browse-url)
 
+;; Install use package
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
@@ -112,7 +117,8 @@
   :config
   (load-theme 'dracula t)
   (set-background-color "black")
-  (set-face-foreground 'font-lock-comment-face "darkgreen"))
+  (set-face-foreground 'font-lock-comment-face "darkgreen")
+  (set-face-foreground 'font-lock-comment-delimiter-face "darkgreen"))
 
 (use-package diminish
   :ensure t
